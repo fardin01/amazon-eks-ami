@@ -1,6 +1,6 @@
 {
   "variables": {
-    "aws_region": "us-west-2",
+    "aws_region": "eu-west-1",
     "ami_name": null,
     "creator": "{{env `USER`}}",
     "encrypted": "false",
@@ -10,7 +10,7 @@
     "aws_session_token": "{{env `AWS_SESSION_TOKEN`}}",
     "binary_bucket_name": "amazon-eks",
     "binary_bucket_region": "us-west-2",
-    "kubernetes_version": null,
+    "kubernetes_version": "1.18",
     "kubernetes_build_date": null,
     "kernel_version": "",
     "docker_version": "19.03.13ce-1.amzn2",
@@ -29,7 +29,7 @@
     "temporary_security_group_source_cidrs": "",
     "security_group_id": "",
     "associate_public_ip_address": "",
-    "subnet_id": "",
+    "subnet_id": "subnet-f05ecd87",
     "remote_folder": "",
     "launch_block_device_mappings_volume_size": "4",
     "ami_users": "",

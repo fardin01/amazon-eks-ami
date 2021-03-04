@@ -151,6 +151,9 @@ sudo mkdir -p /var/lib/kubernetes
 sudo mkdir -p /var/lib/kubelet
 sudo mkdir -p /opt/cni/bin
 
+sudo touch /var/lib/kubelet/config.json
+echo "{\"auths\": {\"eu.gcr.io\": {\"auth\": \"<BASE64_JSON_TOKEN>\"}}}" | sudo tee /var/lib/kubelet/config.json
+
 echo "Downloading binaries from: s3://$BINARY_BUCKET_NAME"
 S3_DOMAIN="amazonaws.com"
 if [ "$BINARY_BUCKET_REGION" = "cn-north-1" ] || [ "$BINARY_BUCKET_REGION" = "cn-northwest-1" ]; then
